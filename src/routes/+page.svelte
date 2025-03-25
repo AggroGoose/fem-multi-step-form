@@ -1,2 +1,30 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import Sidebar from './components/Sidebar.svelte';
+	import StepOne from './steps/StepOne.svelte';
+	import StepTwo from './steps/StepTwo.svelte';
+
+	let formOptions = $state({
+		step: 1,
+		name: '',
+		email: '',
+		phone: '',
+		plan: 1,
+		annual: false,
+		online: false,
+		storage: false,
+		profile: false
+	});
+
+	let currentStep = $derived(formOptions.step);
+</script>
+
+<main class="flex min-h-screen items-center bg-[#f0f6ff] font-sans">
+	<div class="m-auto flex min-w-[880px] rounded-2xl bg-white p-4 shadow-md">
+		<Sidebar {currentStep} />
+		{#if currentStep === 1}
+			<StepOne {formOptions} />
+		{:else}
+			<StepTwo {formOptions} />
+		{/if}
+	</div>
+</main>
