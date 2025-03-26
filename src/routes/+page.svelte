@@ -1,6 +1,7 @@
 <script>
 	import Sidebar from './components/Sidebar.svelte';
 	import StepOne from './steps/StepOne.svelte';
+	import StepThree from './steps/StepThree.svelte';
 	import StepTwo from './steps/StepTwo.svelte';
 
 	let formOptions = $state({
@@ -24,8 +25,10 @@
 		<Sidebar {currentStep} />
 		{#if currentStep === 1}
 			<StepOne {formOptions} />
-		{:else}
+		{:else if currentStep === 2}
 			<StepTwo {formOptions} />
+		{:else}
+			<StepThree {formOptions} />
 		{/if}
 	</div>
 </main>

@@ -36,7 +36,8 @@
 			</div>
 		</li>
 		<li class="flex items-center gap-4">
-			<button class={`min-w-[2em] rounded-full border border-white p-1 font-medium text-white`}
+			<button
+				class={`min-w-[2em] rounded-full  p-1 font-medium  ${currentStep === 4 ? 'bg-[#bfe2fd]' : 'border border-white text-white'}`}
 				>4</button
 			>
 			<div class="flex flex-col text-sm leading-tight text-white">

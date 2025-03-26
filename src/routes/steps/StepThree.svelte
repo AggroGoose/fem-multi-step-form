@@ -1,26 +1,20 @@
 <script>
-	import AnnualCheck from './components/AnnualCheck.svelte';
-	import SelectPlan from './components/SelectPlan.svelte';
-
 	let { formOptions } = $props();
 
 	const handleNext = () => {
-		formOptions.step = 3;
+		formOptions.step = 4;
 	};
 	const handleBack = () => {
-		formOptions.step = 1;
+		formOptions.step = 2;
 	};
 </script>
 
 <div class="flex basis-[574px] flex-col gap-8 px-16 py-8">
 	<div class="flex flex-col">
-		<h1 class="text-3xl font-bold text-[#02295a]">Select your plan</h1>
-		<p class="text-[#9699ab]">You have the option of monthly or yearly billing.</p>
+		<h1 class="text-3xl font-bold text-[#02295a]">Pick add-ons</h1>
+		<p class="text-[#9699ab]">Add-ons help enhance your gaming experience.</p>
 	</div>
-	<div class="flex flex-col gap-4 text-[#02295a]">
-		<SelectPlan {formOptions} />
-		<AnnualCheck {formOptions} />
-	</div>
+	<div class="flex flex-col gap-4 text-[#02295a]">We made it to step three, gooby!</div>
 	<div class="mt-auto flex items-center justify-between">
 		<button
 			onclick={handleBack}
