@@ -1,4 +1,7 @@
 <script>
+	import AnnualCheck from './stepTwo/AnnualCheck.svelte';
+	import SelectPlan from './stepTwo/SelectPlan.svelte';
+
 	let { formOptions } = $props();
 
 	const handleNext = () => {
@@ -14,7 +17,10 @@
 		<h1 class="text-3xl font-bold text-[#02295a]">Select your plan</h1>
 		<p class="text-[#9699ab]">You have the option of monthly or yearly billing.</p>
 	</div>
-	<div class="flex flex-col gap-4 text-[#02295a]">Why you hate me, gooby?</div>
+	<div class="flex flex-col gap-4 text-[#02295a]">
+		<SelectPlan {formOptions} />
+		<AnnualCheck {formOptions} />
+	</div>
 	<div class="mt-auto flex items-center justify-between">
 		<button
 			onclick={handleBack}

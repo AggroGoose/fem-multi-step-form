@@ -9,6 +9,7 @@
 		email: '',
 		phone: '',
 		plan: 1,
+		planPrice: 9,
 		annual: false,
 		online: false,
 		storage: false,
