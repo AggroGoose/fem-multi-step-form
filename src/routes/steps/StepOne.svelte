@@ -1,7 +1,26 @@
 <script>
 	let { formOptions } = $props();
 
+	let nameError = $state(false);
+	let emailError = $state(false);
+	let phoneError = $state(false);
+
 	const handleNext = () => {
+		if (formOptions.name.length < 1) {
+			nameError = true;
+			return;
+		}
+		nameError = false;
+		if (formOptions.email.length < 1) {
+			emailError = true;
+			return;
+		}
+		emailError = false;
+		if (formOptions.phone.length < 1) {
+			phoneError = true;
+			return;
+		}
+		phoneError = false;
 		formOptions.step = 2;
 	};
 </script>
@@ -13,27 +32,42 @@
 	</div>
 	<div class="flex w-full flex-col gap-4 text-[#02295a]">
 		<label class="block">
-			<span class="text-[#02295a]"> Name </span>
+			<div class="flex justify-between text-[#02295a]">
+				<p>Name</p>
+				{#if nameError}
+					<p class="font-medium text-[#ed3548]">This field is required</p>
+				{/if}
+			</div>
 			<input
 				type="text"
-				class="mt-1 block w-full rounded-lg font-medium"
+				class={`mt-1 block w-full rounded-lg font-medium ${nameError ? 'border-[#ed3548]' : 'border-[#9699ab]'}`}
 				bind:value={formOptions.name}
 			/>
 		</label>
 		<label class="block">
-			<span class="text-[#02295a]"> Email Address </span>
+			<div class="flex justify-between text-[#02295a]">
+				<p>Email Address</p>
+				{#if emailError}
+					<p class="font-medium text-[#ed3548]">This field is required</p>
+				{/if}
+			</div>
 			<input
 				type="email"
-				class="mt-1 block w-full rounded-lg font-medium"
+				class={`mt-1 block w-full rounded-lg font-medium ${emailError ? 'border-[#ed3548]' : 'border-[#9699ab]'}`}
 				placeholder="john@example.com"
 				bind:value={formOptions.email}
 			/>
 		</label>
 		<label class="block">
-			<span class="text-[#02295a]"> Phone Number </span>
+			<div class="flex justify-between text-[#02295a]">
+				<p>Phone Number</p>
+				{#if phoneError}
+					<p class="font-medium text-[#ed3548]">This field is required</p>
+				{/if}
+			</div>
 			<input
 				type="text"
-				class="mt-1 block w-full rounded-lg font-medium"
+				class={`mt-1 block w-full rounded-lg font-medium ${phoneError ? 'border-[#ed3548]' : 'border-[#9699ab]'}`}
 				placeholder="e.g. +1 234 567 890"
 				bind:value={formOptions.phone}
 			/>

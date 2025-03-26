@@ -1,5 +1,6 @@
 <script>
 	import Sidebar from './components/Sidebar.svelte';
+	import StepFour from './steps/StepFour.svelte';
 	import StepOne from './steps/StepOne.svelte';
 	import StepThree from './steps/StepThree.svelte';
 	import StepTwo from './steps/StepTwo.svelte';
@@ -27,8 +28,10 @@
 			<StepOne {formOptions} />
 		{:else if currentStep === 2}
 			<StepTwo {formOptions} />
-		{:else}
+		{:else if currentStep === 3}
 			<StepThree {formOptions} />
+		{:else if currentStep === 4}
+			<StepFour {formOptions} />
 		{/if}
 	</div>
 </main>
