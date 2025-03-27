@@ -25,7 +25,9 @@
 	};
 </script>
 
-<div class="flex basis-[574px] flex-col gap-8 px-16 py-8">
+<div
+	class="z-10 flex flex-col gap-8 px-16 py-8 max-sm:absolute max-sm:top-24 max-sm:mx-4 max-sm:rounded-lg max-sm:bg-white sm:basis-[574px]"
+>
 	<div class="flex flex-col">
 		<h1 class="text-3xl font-bold text-[#02295a]">Personal info</h1>
 		<p class="text-[#9699ab]">Please provide your name, email address, and phone number.</p>

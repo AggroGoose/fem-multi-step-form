@@ -21,8 +21,10 @@
 	let currentStep = $derived(formOptions.step);
 </script>
 
-<main class="flex min-h-screen items-center bg-[#f0f6ff] font-sans">
-	<div class="m-auto flex min-w-[880px] rounded-2xl bg-white p-4 shadow-md">
+<main class="min-h-screen bg-[#f0f6ff] font-sans sm:flex sm:items-center">
+	<div
+		class="m-auto flex rounded-2xl shadow-md max-sm:flex-col sm:min-w-[880px] sm:bg-white sm:p-4"
+	>
 		<Sidebar {currentStep} />
 		{#if currentStep === 1}
 			<StepOne {formOptions} />
