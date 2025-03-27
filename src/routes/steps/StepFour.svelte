@@ -10,7 +10,7 @@
 	);
 
 	const handleNext = () => {
-		formOptions.step = 4;
+		formOptions.step = 5;
 	};
 	const handleBack = () => {
 		formOptions.step = 3;
