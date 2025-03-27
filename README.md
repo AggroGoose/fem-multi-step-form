@@ -1,38 +1,7 @@
-# sv
+# Project Overview
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This project is a challenge project offered by Front End Mentor. Front End Mentor provides the design assets and explains intended functionality, but the frameworks and path to creating the project is left to the user.
 
-## Creating a project
+I chose this project as I had not worked with multi-step forms yet and wanted to experiment with Svelte 5s rune system as I hadn't worked with Svelte Stores since Svelte 4.
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Ultimately I found that, in contradiction to my state management experiences in React, Svelte 5s rune system is incredibly intuitive. Everything I tried, "just to see if it will work", worked out just as intended with little to no extra troubleguessing needed. While this was a relatively small project, it was enjoyable during its duration.
